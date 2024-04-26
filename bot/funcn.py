@@ -1,8 +1,8 @@
 #    This file is part of the CompressorQueue distribution.
 #    Copyright (c) 2021 Danish_00
-#    Script Improved by Zylern
+#    Script Improved by Zylern And Again Upgraded By PbAjay
 
-    from . import *
+from . import *
 from .config import *
 from .worker import *
 from urllib.parse import unquote
