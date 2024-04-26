@@ -145,7 +145,6 @@ from .config import *
 from .worker import *
 from .devtools import *
 from .FastTelethon import *
-
 LOGS.info("Starting...")
 
 try:
@@ -153,12 +152,13 @@ try:
 except Exception as er:
     LOGS.info(er)
 
-
 ####### GENERAL CMDS ########
 
 @bot.on(events.NewMessage(pattern="/start"))
 async def _(e):
     await start(e)
+
+
 
 
 @bot.on(events.NewMessage(pattern="/setcode"))
