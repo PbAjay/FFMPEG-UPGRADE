@@ -27,9 +27,8 @@ from telethon import Button, TelegramClient, errors, events, functions, types
 from telethon.sessions import StringSession
 from telethon.utils import pack_bot_file_id
 from .config import *
+
 LOG_FILE_NAME = "TGVid-Comp@Log.txt"
-
-
 
 if os.path.exists(LOG_FILE_NAME):
     with open(LOG_FILE_NAME, "r+") as f_d:
@@ -59,3 +58,4 @@ except Exception as e:
     LOGS.info("Bot is quiting...")
     LOGS.info(str(e))
     exit()
+
