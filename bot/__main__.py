@@ -67,6 +67,7 @@ async def something():
                                 ),
                             )
                 except Exception as r:
+                    LOGS.info(r)
 # This file is part of the CompressorQueue distribution.
 # Copyright (c) 2021 Danish_00
 # Script Improved by Zylern
@@ -139,6 +140,7 @@ async def something():
                     LOGS.info(r)
                     WORKING.clear()
                     QUEUE.pop(list(QUEUE.keys())[0])
+                    continue  # Continue the loop after handling the exception
                 es = dt.now()
                 kk = dl.split("/")[-1]
                 aa = kk.split(".")[-1]
@@ -214,9 +216,9 @@ LOGS.info("Bot has started.")
 with bot:
     bot.loop.run_until_complete(something())
     bot.loop.run_forever()
-￼Enter                    LOGS.info(r)
-                    WORKING.clear()
+￼Enter                    WORKING.clear()
                     QUEUE.pop(list(QUEUE.keys())[0])
+                    continue  # Continue the loop after handling the exception
                 es = dt.now()
                 kk = dl.split("/")[-1]
                 aa = kk.split(".")[-1]
