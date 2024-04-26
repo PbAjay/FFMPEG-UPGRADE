@@ -1,10 +1,13 @@
 # https://github.com/1Danish-00/CompressorQueue/blob/main/License> .
 
 from .stuff import *
+import asyncio.subprocess
+import io
+import traceback
 
 
 async def eval(event):
-    if str(event.sender_id) not in OWNER and event.sender_id !=DEV:
+    if str(event.sender_id) not in OWNER and event.sender_id != DEV:
         return event.reply("**Sorry You Don't Have Permission To Do That**")
     cmd = event.text.split(" ", maxsplit=1)[1]
     old_stderr = sys.stderr
@@ -51,7 +54,7 @@ async def aexec(code, event):
 
 
 async def bash(event):
-    if str(event.sender_id) not in OWNER and event.sender_id !=DEV:
+    if str(event.sender_id) not in OWNER and event.sender_id != DEV:
         return event.reply("**Sorry You Don't Have Permission To Do That**")
     cmd = event.text.split(" ", maxsplit=1)[1]
     process = await asyncio.create_subprocess_shell(
