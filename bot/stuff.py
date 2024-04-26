@@ -18,10 +18,10 @@ async def up(event):
 
 async def start(event):
     await event.reply(
-        f"**Send me the video which you want to compress.**\n**Uptime: {str(datetime.now() - START_TIME).split('.')[0]}\n\nTesting (currectly on beta mode)**",
+        f"**Send me the video which you want to encode.**\n**Uptime: {str(datetime.now() - START_TIME).split('.')[0]}\n\n**",
         buttons=[
-            [Button.inline("HELP", data="help")],
-            [Button.url("Maintainer",url="t.me/starley_tg")],
+            [Button.inline("♻️ HELP ♻️", data="help")],
+            [Button.url("💥 OWNER 💥",url="t.me/TGxD2K")],
         ],
     )
 
@@ -51,13 +51,13 @@ async def zylern(event):
 
 async def help(event):
     await event.edit(
-        f"""**Send Me Any Video I Will Automatically Send It's Compressed Video File 😎\n\nSince Bot is on beta mode, it's a bit laggy & slow!**""",
+        f"""**Send Me Any Video I Will Automatically Send It's Encoded Video File 😎\n\nSince Bot is on beta mode, it's a bit laggy & slow!**""",
         buttons=[
-            [Button.url("Owner", url="t.me/starley_tg")],
+            [Button.url("Owner", url="t.me/TGxD2K")],
         ],
     )
     
 async def ihelp(e):
     await e.reply(
-        f"""**Send Me Any Video I Will Automatically Send It's Compressed Video File.**"""
+        f"""**Send Me Any Video I Will Automatically Send It's Encoded Video File.**"""
     )
