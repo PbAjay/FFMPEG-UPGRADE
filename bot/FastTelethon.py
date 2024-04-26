@@ -720,8 +720,6 @@ async def upload_file(
     global filename
     filename = name
     return (await _internal_transfer_to_telegram(client, file, progress_callback))[0]
-￼Enter            break
-        yield data_read
 
 
 async def _internal_transfer_to_telegram(
@@ -746,7 +744,7 @@ async def _internal_transfer_to_telegram(
             hash_md5.update(data)
         if len(buffer) == 0 and len(data) == part_size:
             await uploader.upload(data)
-      continue
+            continue
         new_len = len(buffer) + len(data)
         if new_len >= part_size:
             cutoff = part_size - len(buffer)
@@ -763,6 +761,7 @@ async def _internal_transfer_to_telegram(
         return InputFileBig(file_id, part_count, filename), file_size
     else:
         return InputFile(file_id, part_count, filename, hash_md5.hexdigest()), file_size
+
 
 
 async def download_file(
